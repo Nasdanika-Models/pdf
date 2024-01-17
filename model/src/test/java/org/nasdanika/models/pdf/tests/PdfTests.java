@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.junit.jupiter.api.Test;
 import org.nasdanika.models.pdf.Document;
 import org.nasdanika.models.pdf.Line;
+import org.nasdanika.models.pdf.Page;
 import org.nasdanika.models.pdf.util.PDFTextLoader;
 import org.nasdanika.models.pdf.util.PdfTextResourceFactory;
 
@@ -82,13 +83,20 @@ public class PdfTests {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("pdf", new PdfTextResourceFactory());
 		File test = new File("test.pdf").getCanonicalFile();
-		Resource pdfTextResource = resourceSet.getResource(URI.createFileURI(test.getAbsolutePath()), true);
+		URI resourceURI = URI.createFileURI(test.getAbsolutePath());
+		Resource pdfTextResource = resourceSet.getResource(resourceURI, true);
 		for (EObject root: pdfTextResource.getContents()) {
 			Document modelDocument = (Document) root;
 			System.out.println(modelDocument.getAuthor());
 			System.out.println(modelDocument.getTitle());
+			System.out.println(pdfTextResource.getURIFragment(root));
+			
+			Page pageTen = modelDocument.getPages().get(10);
+			System.out.println(pdfTextResource.getURIFragment(pageTen));
 		}
-	}
-	
 		
+		EObject pageTen = resourceSet.getEObject(resourceURI.appendFragment("//@pages.10"), false);
+		System.out.println(pageTen);
+	}
+			
 }
