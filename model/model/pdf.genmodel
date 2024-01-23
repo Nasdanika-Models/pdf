@@ -18,18 +18,43 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pdf.ecore#//Document/producer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pdf.ecore#//Document/subject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pdf.ecore#//Document/title"/>
+      <genOperations ecoreOperation="pdf.ecore#//Document/getText">
+        <genParameters ecoreParameter="pdf.ecore#//Document/getText/pageSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Document/getText/articleSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Document/getText/paragraphSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Document/getText/lineSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Document/getText/wordSeparator"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="pdf.ecore#//Page">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pdf.ecore#//Page/articles"/>
+      <genOperations ecoreOperation="pdf.ecore#//Page/getText">
+        <genParameters ecoreParameter="pdf.ecore#//Page/getText/articleSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Page/getText/paragraphSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Page/getText/lineSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Page/getText/wordSeparator"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="pdf.ecore#//Article">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pdf.ecore#//Article/paragraphs"/>
+      <genOperations ecoreOperation="pdf.ecore#//Article/getText">
+        <genParameters ecoreParameter="pdf.ecore#//Article/getText/paragraphSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Article/getText/lineSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Article/getText/wordSeparator"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="pdf.ecore#//Paragraph">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pdf.ecore#//Paragraph/lines"/>
+      <genOperations ecoreOperation="pdf.ecore#//Paragraph/getText">
+        <genParameters ecoreParameter="pdf.ecore#//Paragraph/getText/lineSeparator"/>
+        <genParameters ecoreParameter="pdf.ecore#//Paragraph/getText/wordSeparator"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="pdf.ecore#//Line">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pdf.ecore#//Line/words"/>
+      <genOperations ecoreOperation="pdf.ecore#//Line/getText">
+        <genParameters ecoreParameter="pdf.ecore#//Line/getText/wordSeparator"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="pdf.ecore#//Word">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pdf.ecore#//Word/text"/>

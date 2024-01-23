@@ -4,6 +4,7 @@ package org.nasdanika.models.pdf;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -157,13 +158,22 @@ public interface PdfPackage extends EPackage {
 	int DOCUMENT_FEATURE_COUNT = 9;
 
 	/**
+	 * The operation id for the '<em>Get Text</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT___GET_TEXT__STRING_STRING_STRING_STRING_STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_OPERATION_COUNT = 0;
+	int DOCUMENT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.pdf.impl.PageImpl <em>Page</em>}' class.
@@ -194,13 +204,22 @@ public interface PdfPackage extends EPackage {
 	int PAGE_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Get Text</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAGE___GET_TEXT__STRING_STRING_STRING_STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_OPERATION_COUNT = 0;
+	int PAGE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.pdf.impl.ArticleImpl <em>Article</em>}' class.
@@ -231,13 +250,22 @@ public interface PdfPackage extends EPackage {
 	int ARTICLE_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Get Text</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTICLE___GET_TEXT__STRING_STRING_STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Article</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARTICLE_OPERATION_COUNT = 0;
+	int ARTICLE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.pdf.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -268,13 +296,22 @@ public interface PdfPackage extends EPackage {
 	int PARAGRAPH_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Get Text</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPH___GET_TEXT__STRING_STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Paragraph</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH_OPERATION_COUNT = 0;
+	int PARAGRAPH_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.pdf.impl.LineImpl <em>Line</em>}' class.
@@ -305,13 +342,22 @@ public interface PdfPackage extends EPackage {
 	int LINE_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Get Text</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE___GET_TEXT__STRING = 0;
+
+	/**
 	 * The number of operations of the '<em>Line</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINE_OPERATION_COUNT = 0;
+	int LINE_OPERATION_COUNT = 1;
 
 
 	/**
@@ -462,6 +508,16 @@ public interface PdfPackage extends EPackage {
 	EAttribute getDocument_Title();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.pdf.Document#getText(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Get Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text</em>' operation.
+	 * @see org.nasdanika.models.pdf.Document#getText(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getDocument__GetText__String_String_String_String_String();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.pdf.Page <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -481,6 +537,16 @@ public interface PdfPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPage_Articles();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.pdf.Page#getText(java.lang.String, java.lang.String, java.lang.String, java.lang.String) <em>Get Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text</em>' operation.
+	 * @see org.nasdanika.models.pdf.Page#getText(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getPage__GetText__String_String_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.pdf.Article <em>Article</em>}'.
@@ -504,6 +570,16 @@ public interface PdfPackage extends EPackage {
 	EReference getArticle_Paragraphs();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.pdf.Article#getText(java.lang.String, java.lang.String, java.lang.String) <em>Get Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text</em>' operation.
+	 * @see org.nasdanika.models.pdf.Article#getText(java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getArticle__GetText__String_String_String();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.pdf.Paragraph <em>Paragraph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -525,6 +601,16 @@ public interface PdfPackage extends EPackage {
 	EReference getParagraph_Lines();
 
 	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.pdf.Paragraph#getText(java.lang.String, java.lang.String) <em>Get Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text</em>' operation.
+	 * @see org.nasdanika.models.pdf.Paragraph#getText(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getParagraph__GetText__String_String();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.pdf.Line <em>Line</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +630,16 @@ public interface PdfPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLine_Words();
+
+	/**
+	 * Returns the meta object for the '{@link org.nasdanika.models.pdf.Line#getText(java.lang.String) <em>Get Text</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Text</em>' operation.
+	 * @see org.nasdanika.models.pdf.Line#getText(java.lang.String)
+	 * @generated
+	 */
+	EOperation getLine__GetText__String();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.pdf.Word <em>Word</em>}'.
@@ -672,6 +768,14 @@ public interface PdfPackage extends EPackage {
 		EAttribute DOCUMENT__TITLE = eINSTANCE.getDocument_Title();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DOCUMENT___GET_TEXT__STRING_STRING_STRING_STRING_STRING = eINSTANCE.getDocument__GetText__String_String_String_String_String();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.pdf.impl.PageImpl <em>Page</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -688,6 +792,14 @@ public interface PdfPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PAGE__ARTICLES = eINSTANCE.getPage_Articles();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PAGE___GET_TEXT__STRING_STRING_STRING_STRING = eINSTANCE.getPage__GetText__String_String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.pdf.impl.ArticleImpl <em>Article</em>}' class.
@@ -708,6 +820,14 @@ public interface PdfPackage extends EPackage {
 		EReference ARTICLE__PARAGRAPHS = eINSTANCE.getArticle_Paragraphs();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ARTICLE___GET_TEXT__STRING_STRING_STRING = eINSTANCE.getArticle__GetText__String_String_String();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.pdf.impl.ParagraphImpl <em>Paragraph</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -726,6 +846,14 @@ public interface PdfPackage extends EPackage {
 		EReference PARAGRAPH__LINES = eINSTANCE.getParagraph_Lines();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PARAGRAPH___GET_TEXT__STRING_STRING = eINSTANCE.getParagraph__GetText__String_String();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.pdf.impl.LineImpl <em>Line</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -742,6 +870,14 @@ public interface PdfPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINE__WORDS = eINSTANCE.getLine_Words();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation LINE___GET_TEXT__STRING = eINSTANCE.getLine__GetText__String();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.pdf.impl.WordImpl <em>Word</em>}' class.

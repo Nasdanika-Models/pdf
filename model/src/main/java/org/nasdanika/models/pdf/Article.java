@@ -35,4 +35,12 @@ public interface Article extends EObject {
 	 */
 	EList<Paragraph> getParagraphs();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String getText(String paragraphSeparator, String lineSeparator, String wordSeparator);
+
 } // Article

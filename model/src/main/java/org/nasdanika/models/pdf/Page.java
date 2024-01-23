@@ -35,4 +35,12 @@ public interface Page extends EObject {
 	 */
 	EList<Article> getArticles();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String getText(String articleSeparator, String paragraphSeparator, String lineSeparator, String wordSeparator);
+
 } // Page

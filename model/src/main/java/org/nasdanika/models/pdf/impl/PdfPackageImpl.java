@@ -4,6 +4,7 @@ package org.nasdanika.models.pdf.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -233,6 +234,16 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getDocument__GetText__String_String_String_String_String() {
+		return documentEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getPage() {
 		return pageEClass;
 	}
@@ -245,6 +256,16 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 	@Override
 	public EReference getPage_Articles() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getPage__GetText__String_String_String_String() {
+		return pageEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -273,6 +294,16 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getArticle__GetText__String_String_String() {
+		return articleEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getParagraph() {
 		return paragraphEClass;
 	}
@@ -293,6 +324,16 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 	 * @generated
 	 */
 	@Override
+	public EOperation getParagraph__GetText__String_String() {
+		return paragraphEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLine() {
 		return lineEClass;
 	}
@@ -305,6 +346,16 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 	@Override
 	public EReference getLine_Words() {
 		return (EReference)lineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getLine__GetText__String() {
+		return lineEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -366,18 +417,23 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 		createEAttribute(documentEClass, DOCUMENT__PRODUCER);
 		createEAttribute(documentEClass, DOCUMENT__SUBJECT);
 		createEAttribute(documentEClass, DOCUMENT__TITLE);
+		createEOperation(documentEClass, DOCUMENT___GET_TEXT__STRING_STRING_STRING_STRING_STRING);
 
 		pageEClass = createEClass(PAGE);
 		createEReference(pageEClass, PAGE__ARTICLES);
+		createEOperation(pageEClass, PAGE___GET_TEXT__STRING_STRING_STRING_STRING);
 
 		articleEClass = createEClass(ARTICLE);
 		createEReference(articleEClass, ARTICLE__PARAGRAPHS);
+		createEOperation(articleEClass, ARTICLE___GET_TEXT__STRING_STRING_STRING);
 
 		paragraphEClass = createEClass(PARAGRAPH);
 		createEReference(paragraphEClass, PARAGRAPH__LINES);
+		createEOperation(paragraphEClass, PARAGRAPH___GET_TEXT__STRING_STRING);
 
 		lineEClass = createEClass(LINE);
 		createEReference(lineEClass, LINE__WORDS);
+		createEOperation(lineEClass, LINE___GET_TEXT__STRING);
 
 		wordEClass = createEClass(WORD);
 		createEAttribute(wordEClass, WORD__TEXT);
@@ -424,17 +480,42 @@ public class PdfPackageImpl extends EPackageImpl implements PdfPackage {
 		initEAttribute(getDocument_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDocument_Title(), ecorePackage.getEString(), "title", null, 0, 1, Document.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getDocument__GetText__String_String_String_String_String(), ecorePackage.getEString(), "getText", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "pageSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "articleSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "paragraphSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lineSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "wordSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPage_Articles(), this.getArticle(), null, "articles", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getPage__GetText__String_String_String_String(), ecorePackage.getEString(), "getText", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "articleSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "paragraphSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lineSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "wordSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(articleEClass, Article.class, "Article", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArticle_Paragraphs(), this.getParagraph(), null, "paragraphs", null, 0, -1, Article.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getArticle__GetText__String_String_String(), ecorePackage.getEString(), "getText", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "paragraphSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lineSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "wordSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(paragraphEClass, Paragraph.class, "Paragraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getParagraph_Lines(), this.getLine(), null, "lines", null, 0, -1, Paragraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getParagraph__GetText__String_String(), ecorePackage.getEString(), "getText", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "lineSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "wordSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLine_Words(), this.getWord(), null, "words", null, 0, -1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getLine__GetText__String(), ecorePackage.getEString(), "getText", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "wordSeparator", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(wordEClass, Word.class, "Word", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWord_Text(), ecorePackage.getEString(), "text", null, 0, 1, Word.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

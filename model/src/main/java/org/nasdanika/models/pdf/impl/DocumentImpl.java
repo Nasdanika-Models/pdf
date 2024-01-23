@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.pdf.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import java.util.Date;
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.pdf.Document;
 import org.nasdanika.models.pdf.Page;
+import org.nasdanika.models.pdf.Paragraph;
 import org.nasdanika.models.pdf.PdfPackage;
 
 /**
@@ -318,6 +320,24 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(String pageSeparator, String articleSeparator, String paragraphSeparator, String lineSeparator, String wordSeparator) {
+		StringBuilder ret = new StringBuilder();
+		for (Page p: getPages()) {
+			if (!ret.isEmpty() && pageSeparator != null) {
+				ret.append(pageSeparator);
+			}
+			ret.append(p.getText(articleSeparator, paragraphSeparator, lineSeparator, wordSeparator));
+		}
+		
+		return ret.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -467,6 +487,20 @@ public class DocumentImpl extends MinimalEObjectImpl.Container implements Docume
 				return TITLE_EDEFAULT == null ? getTitle() != null : !TITLE_EDEFAULT.equals(getTitle());
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PdfPackage.DOCUMENT___GET_TEXT__STRING_STRING_STRING_STRING_STRING:
+				return getText((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //DocumentImpl

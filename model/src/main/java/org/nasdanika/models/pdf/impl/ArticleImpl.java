@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.pdf.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -76,6 +77,24 @@ public class ArticleImpl extends MinimalEObjectImpl.Container implements Article
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(String paragraphSeparator, String lineSeparator, String wordSeparator) {
+		StringBuilder ret = new StringBuilder();
+		for (Paragraph p: getParagraphs()) {
+			if (!ret.isEmpty() && paragraphSeparator != null) {
+				ret.append(paragraphSeparator);
+			}
+			ret.append(p.getText(lineSeparator, wordSeparator));
+		}
+		
+		return ret.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -145,6 +164,20 @@ public class ArticleImpl extends MinimalEObjectImpl.Container implements Article
 				return !getParagraphs().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PdfPackage.ARTICLE___GET_TEXT__STRING_STRING_STRING:
+				return getText((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ArticleImpl

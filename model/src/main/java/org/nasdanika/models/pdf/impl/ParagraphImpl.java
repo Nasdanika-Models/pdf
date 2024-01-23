@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.pdf.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -76,6 +77,24 @@ public class ParagraphImpl extends MinimalEObjectImpl.Container implements Parag
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(String lineSeparator, String wordSeparator) {
+		StringBuilder ret = new StringBuilder();
+		for (Line l: getLines()) {
+			if (!ret.isEmpty() && lineSeparator != null) {
+				ret.append(lineSeparator);
+			}
+			ret.append(l.getText(wordSeparator));
+		}
+		
+		return ret.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -145,6 +164,20 @@ public class ParagraphImpl extends MinimalEObjectImpl.Container implements Parag
 				return !getLines().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PdfPackage.PARAGRAPH___GET_TEXT__STRING_STRING:
+				return getText((String)arguments.get(0), (String)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ParagraphImpl

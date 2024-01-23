@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.pdf.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.pdf.Article;
 import org.nasdanika.models.pdf.Page;
+import org.nasdanika.models.pdf.Paragraph;
 import org.nasdanika.models.pdf.PdfPackage;
 
 /**
@@ -71,6 +73,25 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	@Override
 	public EList<Article> getArticles() {
 		return (EList<Article>)eDynamicGet(PdfPackage.PAGE__ARTICLES, PdfPackage.Literals.PAGE__ARTICLES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(String articleSeparator, String paragraphSeparator, String lineSeparator, String wordSeparator) {
+		StringBuilder ret = new StringBuilder();
+		for (Article a: getArticles()) {
+			if (!ret.isEmpty() && articleSeparator != null) {
+				ret.append(articleSeparator);
+			}
+			ret.append(a.getText(paragraphSeparator, lineSeparator, wordSeparator));
+		}
+		
+		return ret.toString();
+		
 	}
 
 	/**
@@ -145,6 +166,20 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				return !getArticles().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PdfPackage.PAGE___GET_TEXT__STRING_STRING_STRING_STRING:
+				return getText((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //PageImpl

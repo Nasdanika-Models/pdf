@@ -2,6 +2,7 @@
  */
 package org.nasdanika.models.pdf.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -12,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.pdf.Line;
+import org.nasdanika.models.pdf.Paragraph;
 import org.nasdanika.models.pdf.PdfPackage;
 import org.nasdanika.models.pdf.Word;
 
@@ -67,6 +69,24 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line {
 	@Override
 	public EList<Word> getWords() {
 		return (EList<Word>)eDynamicGet(PdfPackage.LINE__WORDS, PdfPackage.Literals.LINE__WORDS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(String wordSeparator) {
+		StringBuilder ret = new StringBuilder();
+		for (Word w: getWords()) {
+			if (!ret.isEmpty() && wordSeparator != null) {
+				ret.append(wordSeparator);
+			}
+			ret.append(w.getText());
+		}
+		
+		return ret.toString();
 	}
 
 	/**
@@ -141,6 +161,20 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line {
 				return !getWords().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PdfPackage.LINE___GET_TEXT__STRING:
+				return getText((String)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //LineImpl

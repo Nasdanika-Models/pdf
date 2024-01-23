@@ -35,4 +35,12 @@ public interface Paragraph extends EObject {
 	 */
 	EList<Line> getLines();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String getText(String lineSeparator, String wordSeparator);
+
 } // Paragraph

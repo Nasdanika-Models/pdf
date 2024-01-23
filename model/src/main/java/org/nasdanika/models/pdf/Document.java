@@ -220,4 +220,12 @@ public interface Document extends EObject {
 	 */
 	void setTitle(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String getText(String pageSeparator, String articleSeparator, String paragraphSeparator, String lineSeparator, String wordSeparator);
+
 } // Document

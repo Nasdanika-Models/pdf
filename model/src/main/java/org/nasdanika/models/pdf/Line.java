@@ -34,4 +34,12 @@ public interface Line extends EObject {
 	 */
 	EList<Word> getWords();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String getText(String wordSeparator);
+
 } // Line
