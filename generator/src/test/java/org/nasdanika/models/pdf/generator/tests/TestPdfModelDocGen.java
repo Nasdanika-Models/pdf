@@ -24,7 +24,7 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.html.bootstrap.Theme;
 import org.nasdanika.html.model.app.Action;
 import org.nasdanika.html.model.app.gen.AppSiteGenerator;
-import org.nasdanika.models.ecore.graph.processors.EcoreActionGenerator;
+import org.nasdanika.models.ecore.graph.processors.EcoreHtmlAppGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 import org.nasdanika.models.pdf.PdfPackage;
 import org.nasdanika.models.pdf.processors.EcoreGenPdfProcessorsFactory;
@@ -65,12 +65,12 @@ public class TestPdfModelDocGen {
 				Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/"))	
 			);
 			
-		EcoreActionGenerator eCoreActionGenerator = new EcoreActionGenerator(
+		EcoreHtmlAppGenerator eCoreHtmlAppGenerator = new EcoreHtmlAppGenerator(
 				PdfPackage.eINSTANCE, 
 				packageURIMap, 
 				ecoreNodeProcessorFactory);
 		
-		eCoreActionGenerator.generateActionModel(diagnosticConsumer, output, progressMonitor);
+		eCoreHtmlAppGenerator.generateHtmlAppModel(diagnosticConsumer, output, progressMonitor);
 				
 		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
