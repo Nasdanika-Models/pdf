@@ -1,0 +1,206 @@
+{
+  "references/eClassifiers/Article/references/eOperations/getText-0/references/eParameters/wordSeparator/index.html": {
+    "path": "Article/Operations/getText/Parameters/wordSeparator",
+    "link-uuid": "32296baa-6201-4d42-9b47-0ec8542888a6",
+    "title": "wordSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/creator/index.html": {
+    "path": "Document/Attributes/creator",
+    "link-uuid": "5cabd5a4-f9fc-44c2-ac33-40a4b2c6e614",
+    "title": "creator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/keywords/index.html": {
+    "path": "Document/Attributes/keywords",
+    "link-uuid": "f80fac44-f81e-417b-bc46-2225a1027f4c",
+    "title": "keywords",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/pages/index.html": {
+    "path": "Document/References/pages",
+    "link-uuid": "1159db4e-1092-4dae-8adf-3951fbabbfc8",
+    "title": "pages",
+    "content": "Type Page Multiplicity 0..*"
+  },
+  "references/eClassifiers/Article/references/eStructuralFeatures/paragraphs/index.html": {
+    "path": "Article/References/paragraphs",
+    "link-uuid": "46a16dc0-624f-4387-8484-7824be236663",
+    "title": "paragraphs",
+    "content": "Type Paragraph Multiplicity 0..*"
+  },
+  "references/eClassifiers/Article/references/eOperations/getText-0/index.html": {
+    "path": "Article/Operations/getText",
+    "link-uuid": "01103b71-baa6-4f2f-b2f4-c918df35682e",
+    "title": "getText",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/articles/index.html": {
+    "path": "Page/References/articles",
+    "link-uuid": "65971ce4-eea6-4796-b205-3cd715d0ebc3",
+    "title": "articles",
+    "content": "Type Article Multiplicity 0..*"
+  },
+  "references/eClassifiers/Page/references/eOperations/getText-0/references/eParameters/lineSeparator/index.html": {
+    "path": "Page/Operations/getText/Parameters/lineSeparator",
+    "link-uuid": "47a9eff2-1097-4ce1-9a2d-afb5af73225b",
+    "title": "lineSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Page/references/eOperations/getText-0/references/eParameters/paragraphSeparator/index.html": {
+    "path": "Page/Operations/getText/Parameters/paragraphSeparator",
+    "link-uuid": "11ffdd72-4a6d-4d3e-95dd-3fcddeb4b445",
+    "title": "paragraphSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/references/eParameters/articleSeparator/index.html": {
+    "path": "Document/Operations/getText/Parameters/articleSeparator",
+    "link-uuid": "fddd2611-610c-4c26-9675-9b556638d39c",
+    "title": "articleSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/index.html": {
+    "path": "Document/Operations/getText",
+    "link-uuid": "b84d59eb-8f2d-4923-af10-1cd771c4e178",
+    "title": "getText",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/references/eParameters/lineSeparator/index.html": {
+    "path": "Document/Operations/getText/Parameters/lineSeparator",
+    "link-uuid": "198fdee3-9f5a-4652-8cdd-e7b2fdc26af2",
+    "title": "lineSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Line/references/eOperations/getText-0/index.html": {
+    "path": "Line/Operations/getText",
+    "link-uuid": "82c3d41a-3f3e-4dbd-9f14-2bb2e37709ca",
+    "title": "getText",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Paragraph/references/eStructuralFeatures/lines/index.html": {
+    "path": "Paragraph/References/lines",
+    "link-uuid": "1dd6d634-466c-4a30-88f9-89a77a2ff972",
+    "title": "lines",
+    "content": "Type Line Multiplicity 0..*"
+  },
+  "references/eClassifiers/Page/references/eOperations/getText-0/references/eParameters/wordSeparator/index.html": {
+    "path": "Page/Operations/getText/Parameters/wordSeparator",
+    "link-uuid": "f93253be-6260-4a70-9f1a-d6bb0f2275cb",
+    "title": "wordSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/producer/index.html": {
+    "path": "Document/Attributes/producer",
+    "link-uuid": "063d53b9-5169-4132-9b4d-74b35afbb167",
+    "title": "producer",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/subject/index.html": {
+    "path": "Document/Attributes/subject",
+    "link-uuid": "f84956b2-7400-44cf-a22b-1b367e6908a1",
+    "title": "subject",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Article/references/eOperations/getText-0/references/eParameters/lineSeparator/index.html": {
+    "path": "Article/Operations/getText/Parameters/lineSeparator",
+    "link-uuid": "c318b592-6200-45b0-a751-25433037d332",
+    "title": "lineSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Word/references/eStructuralFeatures/text/index.html": {
+    "path": "Word/Attributes/text",
+    "link-uuid": "954cd1dc-1ca4-4d8a-a7b4-b92669c720ff",
+    "title": "text",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/title/index.html": {
+    "path": "Document/Attributes/title",
+    "link-uuid": "c74f9215-9124-4f17-a560-b5d3cb116a93",
+    "title": "title",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Line/references/eOperations/getText-0/references/eParameters/wordSeparator/index.html": {
+    "path": "Line/Operations/getText/Parameters/wordSeparator",
+    "link-uuid": "2271eb44-6f9b-4890-8e5e-ccd7fe986244",
+    "title": "wordSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Line/references/eStructuralFeatures/words/index.html": {
+    "path": "Line/References/words",
+    "link-uuid": "d645012b-7c47-4135-abb3-8660c257b1cc",
+    "title": "words",
+    "content": "Type Word Multiplicity 0..*"
+  },
+  "references/eClassifiers/Paragraph/references/eOperations/getText-0/references/eParameters/wordSeparator/index.html": {
+    "path": "Paragraph/Operations/getText/Parameters/wordSeparator",
+    "link-uuid": "1f1d5044-0030-460e-a4d9-6f02e6db2942",
+    "title": "wordSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/references/eParameters/pageSeparator/index.html": {
+    "path": "Document/Operations/getText/Parameters/pageSeparator",
+    "link-uuid": "b71556c2-10a8-4011-bb4a-8a8ef22a7685",
+    "title": "pageSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/references/eParameters/wordSeparator/index.html": {
+    "path": "Document/Operations/getText/Parameters/wordSeparator",
+    "link-uuid": "082200c6-73a8-4dcc-bcea-6500dfdf7458",
+    "title": "wordSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Page/references/eOperations/getText-0/index.html": {
+    "path": "Page/Operations/getText",
+    "link-uuid": "6b8fdf9d-e044-46f0-b3d5-87d4af37468c",
+    "title": "getText",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/modified/index.html": {
+    "path": "Document/Attributes/modified",
+    "link-uuid": "18f53e8a-b0c5-45d5-8f97-37e2ebca7a18",
+    "title": "modified",
+    "content": "Type EDate Multiplicity 0..1"
+  },
+  "references/eClassifiers/Paragraph/references/eOperations/getText-0/index.html": {
+    "path": "Paragraph/Operations/getText",
+    "link-uuid": "fec0f974-9612-49a0-978f-2801b4a7641e",
+    "title": "getText",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eOperations/getText-0/references/eParameters/paragraphSeparator/index.html": {
+    "path": "Document/Operations/getText/Parameters/paragraphSeparator",
+    "link-uuid": "8463af64-1b6d-414f-be16-27a0c7750830",
+    "title": "paragraphSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/author/index.html": {
+    "path": "Document/Attributes/author",
+    "link-uuid": "f50b0e43-0565-473c-94f0-6975054d96f8",
+    "title": "author",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Document/references/eStructuralFeatures/created/index.html": {
+    "path": "Document/Attributes/created",
+    "link-uuid": "7cb8099d-9127-46b2-b7b0-a55b4c4db38f",
+    "title": "created",
+    "content": "Type EDate Multiplicity 0..1"
+  },
+  "references/eClassifiers/Paragraph/references/eOperations/getText-0/references/eParameters/lineSeparator/index.html": {
+    "path": "Paragraph/Operations/getText/Parameters/lineSeparator",
+    "link-uuid": "2cf31352-e22f-4e42-af4b-74fa4b9251d0",
+    "title": "lineSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Article/references/eOperations/getText-0/references/eParameters/paragraphSeparator/index.html": {
+    "path": "Article/Operations/getText/Parameters/paragraphSeparator",
+    "link-uuid": "5b16f03b-74a9-489b-a7f4-baaa2510b628",
+    "title": "paragraphSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Page/references/eOperations/getText-0/references/eParameters/articleSeparator/index.html": {
+    "path": "Page/Operations/getText/Parameters/articleSeparator",
+    "link-uuid": "d266155f-c82d-4513-97f0-84f1542f0c5a",
+    "title": "articleSeparator",
+    "content": "Type EString Multiplicity 0..1"
+  }
+}
